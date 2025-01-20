@@ -4,18 +4,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AniFire | Watch your favorite shows without any interrupts.",
+  title: "AniGone | Watch Anime Online Free.",
   description:
     "Explore the trending anime, spotlight anime, latest anime & many more.",
   keywords: [
-    "anifire",
+    "aniGone",
     "anime streaming website",
     "trending anime",
     "latest anime",
     "popular anime",
   ],
   openGraph: {
-    title: "AniFire | Watch your favorite shows without any interrupts.",
+    title: "AniGone | Watch Anime Online Free.",
     description:
       "Explore the trending anime, spotlight anime, latest anime & many more.",
     images: "/og-image.png",
