@@ -1,5 +1,6 @@
 import { getAnimeInfoByAnimeId } from "@/api/anime";
 import type { Metadata, ResolvingMetadata } from "next";
+import React, { useEffect } from "react";
 
 type Props = {
   params: Promise<{ episodeId: string }>;
@@ -7,7 +8,7 @@ type Props = {
 
 export async function generateMetadata(
   { params }: Props,
-  parent: ResolvingMetadata,
+  parent: ResolvingMetadata
 ): Promise<Metadata> {
   const animeId = (await params).episodeId;
 
@@ -35,5 +36,17 @@ export async function generateMetadata(
 export default function RootInfoLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "//evendisciplineseedlings.com/ca/86/51/ca86514362b783b9e9d69e455eca31f5.js";
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return children;
 }
