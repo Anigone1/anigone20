@@ -1,3 +1,5 @@
+"use client";
+
 import { getAnimeInfoByAnimeId } from "@/api/anime";
 import type { Metadata, ResolvingMetadata } from "next";
 import { useEffect } from "react";
