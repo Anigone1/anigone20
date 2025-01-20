@@ -3,14 +3,14 @@ import type { Metadata, ResolvingMetadata } from "next";
 import Script from "next/script";
 
 type Props = {
-  params: { episodeId: string };
+  params: { episodeId: string }; // Fixed type definition
 };
 
 export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const animeId = params.episodeId;
+  const animeId = params.episodeId; // Access `episodeId` directly
 
   const {
     anime: {
@@ -38,10 +38,13 @@ export default function RootInfoLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
-      {/* Dynamically load the popunder ad script */}
+      {/* Safely load the script for popunder ads */}
       <Script
         src="//evendisciplineseedlings.com/ca/86/51/ca86514362b783b9e9d69e455eca31f5.js"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
+        onError={() => {
+          console.error("Failed to load the popunder script.");
+        }}
       />
       {children}
     </>
