@@ -1,16 +1,15 @@
 import { getAnimeInfoByAnimeId } from "@/api/anime";
 import type { Metadata, ResolvingMetadata } from "next";
-import Script from "next/script";
 
 type Props = {
-  params: { episodeId: string }; // Fixed type definition
+  params: Promise<{ episodeId: string }>;
 };
 
 export async function generateMetadata(
   { params }: Props,
-  parent: ResolvingMetadata
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
-  const animeId = params.episodeId; // Access `episodeId` directly
+  const animeId = (await params).episodeId;
 
   const {
     anime: {
@@ -22,12 +21,12 @@ export async function generateMetadata(
   const desc: string = description.slice(0, 146) + "...";
 
   return {
-    title: `Watching ${name}` + " | AniGone",
+    title: Watching ${name} + " | AniGone",
     description: desc,
     keywords: name.split(" "),
     openGraph: {
       description: desc,
-      title: `Watching ${name}` + " | AniGone",
+      title: Watching ${name} + " | AniGone",
       images: poster ? poster : previousImages,
     },
   };
@@ -36,17 +35,5 @@ export async function generateMetadata(
 export default function RootInfoLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <>
-      {/* Safely load the script for popunder ads */}
-      <Script
-        src="//evendisciplineseedlings.com/ca/86/51/ca86514362b783b9e9d69e455eca31f5.js"
-        strategy="afterInteractive"
-        onError={() => {
-          console.error("Failed to load the popunder script.");
-        }}
-      />
-      {children}
-    </>
-  );
-}
+  return children;
+} 
