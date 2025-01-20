@@ -21,12 +21,12 @@ export async function generateMetadata(
   const desc: string = description.slice(0, 146) + "...";
 
   return {
-    title: Watching ${name} + " | AniGone",
+    title: `Watching ${name}` + " | AniFire",
     description: desc,
     keywords: name.split(" "),
     openGraph: {
       description: desc,
-      title: Watching ${name} + " | AniGone",
+      title: `Watching ${name}` + " | AniFire",
       images: poster ? poster : previousImages,
     },
   };
@@ -36,4 +36,4 @@ export default function RootInfoLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return children;
-} 
+}
