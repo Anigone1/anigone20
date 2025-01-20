@@ -24,7 +24,7 @@ export async function generateMetadata(
     description: desc,
     keywords: name.split(" "),
     openGraph: {
-      title: name + " | AniFire",
+      title: name + " | AniGone",
       description: desc,
       images: poster ? poster : previousImages,
     },
