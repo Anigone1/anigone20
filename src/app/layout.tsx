@@ -12,8 +12,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ani-fire.vercel.app"),
-  title: "AniFire | Watch your favorite anime",
+  metadataBase: new URL("https://www.anigone.com"),
+  title: "AniGone | Watch your favorite anime",
   description: "Watch your favorite anime for free without any ads & popups.",
   openGraph: {
     images: "/og-image.png",
