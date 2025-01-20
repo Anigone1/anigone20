@@ -1,16 +1,16 @@
 import { getAnimeInfoByAnimeId } from "@/api/anime";
 import type { Metadata, ResolvingMetadata } from "next";
-import React, { useEffect } from "react";
+import Script from "next/script";
 
 type Props = {
-  params: Promise<{ episodeId: string }>;
+  params: { episodeId: string };
 };
 
 export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const animeId = (await params).episodeId;
+  const animeId = params.episodeId;
 
   const {
     anime: {
@@ -36,17 +36,14 @@ export async function generateMetadata(
 export default function RootInfoLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "//evendisciplineseedlings.com/ca/86/51/ca86514362b783b9e9d69e455eca31f5.js";
-    script.async = true;
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
-
-  return children;
+  return (
+    <>
+      {/* Dynamically load the popunder ad script */}
+      <Script
+        src="//evendisciplineseedlings.com/ca/86/51/ca86514362b783b9e9d69e455eca31f5.js"
+        strategy="lazyOnload"
+      />
+      {children}
+    </>
+  );
 }
