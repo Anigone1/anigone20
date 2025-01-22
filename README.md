@@ -1,6 +1,6 @@
 <h1 align="center">
-  <img align="center" src="/public/anifire-icon.png" alt="anifire logo" width="66" /> </br>
-  Anifire: Anime streaming website
+  <img align="center" src="/public/AniGone-icon.png" alt="AniGone logo" width="66" /> </br>
+  AniGone: Anime streaming website
 </h1>
 
 <p align="center">
@@ -54,7 +54,7 @@
 
 - Add the `.env` on root directory.
   > [!TIP]
-  > path: root to anifire outside the app directory
+  > path: root to AniGone outside the app directory
 
 ```bash
 ## This should be a aniwatch api of ritesh repo (without last slash /)
