@@ -43,7 +43,7 @@
 - Clone the repository.
 
   ```bash
-  git clone https://github.com/Zeddxx/ani-fire.git
+  git clone https://github.com/Anigone1/anigone20.git
   ```
 
 - Install the npm or yarn or pnpm.
