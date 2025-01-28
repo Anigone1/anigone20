@@ -61,7 +61,7 @@ const AniFirePlayer = ({
     playsInline: true,
     autoPlayback: true,
     airplay: true,
-    theme: "#cf3aed",
+    theme: "#f59ae6",
     moreVideoAttr: {
       crossOrigin: "anonymous",
     },
