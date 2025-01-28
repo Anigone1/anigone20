@@ -17,8 +17,24 @@ import ContinueWatching from "@/app/(main)/home/_components/continue-watching";
 import Schedule from "@/app/(main)/home/_components/schedule";
 import HomeLayout from "@/components/shared/layouts/home-layout";
 import HomeSkeleton from "@/components/skeleton/home-skeleton";
+import { useEffect } from "react"; // Import useEffect
 
 export default function Home() {
+  // Initialize Google Analytics
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=G-STLSC4FHH3`; // Replace with your Measurement ID
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-STLSC4FHH3"); // Replace with your Measurement ID
+  }, []);
+
   const { data: animes, isLoading } = useQuery({
     queryKey: ["ANIME_HOME_PAGE"],
     queryFn: () => getAnimeHomePage(),
