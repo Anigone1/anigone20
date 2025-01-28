@@ -2,6 +2,7 @@ import MainWrapper from "@/components/main/layout/main-wrapper";
 import Navbar from "@/components/main/ui/navbar";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { useEffect } from "react"; // Import useEffect
 
 export const metadata: Metadata = {
   title: "AniGone | Watch Anime Online Free.",
@@ -28,6 +29,21 @@ export default function MainRootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Initialize Google Analytics
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=G-STLSC4FHH3`; // Replace with your Measurement ID
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-STLSC4FHH3"); // Replace with your Measurement ID
+  }, []);
+
   return (
     <MainWrapper>
       <Navbar />
