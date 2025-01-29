@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "AniGone | Watch your favorite anime",
   description: "Watch your favorite anime for free without any ads & popups.",
   openGraph: {
-    images: "/og-image.png",
+    images: "",
   },
   robots: {
     index: true,
