@@ -101,14 +101,15 @@ export default function Marketing() {
         <div className="mx-auto flex w-full max-w-[1360px] flex-col items-center justify-between gap-4 sm:flex-row">
           <p>Made with ❤️</p>
 
+          
           <div className="flex items-center gap-1">
-            <p>All rights reserved to its developer!</p>
+            <p>© 2025 AniGone . All rights reserved.</p>
             <Link
-              href="https://github.com/zeddxx"
+              href="https://anigone.com"
               target="_blank"
               className="text-secondary underline underline-offset-2"
             >
-              Github
+              anigone.com
             </Link>
           </div>
         </div>
