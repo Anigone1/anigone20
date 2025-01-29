@@ -32,6 +32,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        {/* Google Analytics Script */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-STLSC4FHH3`}
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-STLSC4FHH3', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        ></script>
+      </head>
       <body className={`${poppins.className} antialiased`}>
         <AppProvider>
           <main>{children}</main>
@@ -41,3 +60,4 @@ export default function RootLayout({
     </html>
   );
 }
+
