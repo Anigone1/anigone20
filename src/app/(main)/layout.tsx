@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "AniGone | Watch your favorite shows without any interrupts.",
     description:
       "Explore the trending anime, spotlight anime, latest anime & many more.",
-    images: "/og-image.png",
+    images: "",
     type: "website",
   },
 };
