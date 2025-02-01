@@ -50,6 +50,13 @@ export default function RootLayout({
             `,
           }}
         ></script>
+
+        {/* Ad Script */}
+        <script
+          type="text/javascript"
+          src="//evendisciplineseedlings.com/ca/86/51/ca86514362b783b9e9d69e455eca31f5.js"
+          async
+        ></script>
       </head>
       <body className={`${poppins.className} antialiased`}>
         <AppProvider>
@@ -60,4 +67,3 @@ export default function RootLayout({
     </html>
   );
 }
-
