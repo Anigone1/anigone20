@@ -54,8 +54,14 @@ export default function RootLayout({
         {/* Ad Script */}
         <script
           type="text/javascript"
-          src="//evendisciplineseedlings.com/ca/86/51/ca86514362b783b9e9d69e455eca31f5.js"
-          async
+          data-cfasync="false"
+          dangerouslySetInnerHTML={{
+            __html: `
+              /*<![CDATA[/* */
+              (function(){var e=window,l="bcc7c0d44350bb442cbac5678173c3ca",d=[["siteId",993+855+658+637+279+5139607],["minBid",0.002],["popundersPerIP","0:1"],["delayBetween",3],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],v=["d3d3LmRpc3BsYXl2ZXJ0aXNpbmcuY29tL294aXZlbHlqcy5taW4uY3Nz","ZDNtem9rdHk5NTFjNXcuY2xvdWRmcm9udC5uZXQvbC9pZW5xdWlyZS5taW4uanM="],k=-1,z,i,x=function(){clearTimeout(i);k++;if(v[k]&&!(1764332265000<(new Date).getTime()&&1<k)){z=e.document.createElement("script");z.type="text/javascript";z.async=!0;var m=e.document.getElementsByTagName("script")[0];z.src="https://"+atob(v[k]);z.crossOrigin="anonymous";z.onerror=x;z.onload=function(){clearTimeout(i);e[l.slice(0,16)+l.slice(0,16)]||x()};i=setTimeout(x,5E3);m.parentNode.insertBefore(z,m)}};if(!e[l]){try{Object.freeze(e[l]=d)}catch(e){}x()}})();
+              /*]]>/* */
+            `,
+          }}
         ></script>
       </head>
       <body className={`${poppins.className} antialiased`}>
