@@ -1,6 +1,5 @@
 import { getAnimeInfoByAnimeId } from "@/api/anime";
 import type { Metadata, ResolvingMetadata } from "next";
-import AdScript from "@/app/(main)/watch/[episodeId]/AdScript"; // Import the ad script component
 
 type Props = {
   params: Promise<{ episodeId: string }>;
@@ -36,10 +35,5 @@ export async function generateMetadata(
 export default function RootInfoLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <>
-      <AdScript /> {/* This will load the ad script on the page */}
-      <>{children}</>
-    </>
-  );
+  return children;
 }
