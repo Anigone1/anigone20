@@ -14,12 +14,12 @@ export async function generateMetadata(
   const previousImages = (await parent).openGraph?.images || [];
 
   return {
-    title: `${capitalize(category.replaceAll("-", " "))} Category | AniFire`,
+    title: `${capitalize(category.replaceAll("-", " "))} Category | Hianime`,
     description: `Explore ${category} in this vast anime library.`,
     keywords: category.split("-"),
     openGraph: {
       description: `Explore ${category} in this vast anime library.`,
-      title: `${capitalize(category)} Category | AniFire`,
+      title: `${capitalize(category)} Category | Hianime`,
       images: [...previousImages],
     },
   };
