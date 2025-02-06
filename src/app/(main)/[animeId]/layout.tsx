@@ -20,11 +20,11 @@ export async function generateMetadata(
   const desc: string = description.slice(0, 146) + "...";
 
   return {
-    title: `${name} | AniGone`,
+    title: `${name} | Hianime`,
     description: desc,
     keywords: name.split(" "),
     openGraph: {
-      title: name + " | AniGone",
+      title: name + " | Hianime",
       description: desc,
       images: poster ? poster : previousImages,
     },
