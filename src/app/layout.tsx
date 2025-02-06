@@ -12,8 +12,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.anigone.com"),
-  title: "AniGone | Watch your favorite anime",
+  metadataBase: new URL("https://www.hianimetv.in"),
+  title: "Hianime | Watch your favorite anime",
   description: "Watch your favorite anime for free without any ads & popups.",
   openGraph: {
     images: "",
@@ -36,7 +36,7 @@ export default function RootLayout({
         {/* Google Analytics Script */}
         <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=G-FHH3STLSC4`}
+          src={`https://www.googletagmanager.com/gtag/js?id=G-NTNTLYGLNN`}
         ></script>
         <script
           dangerouslySetInnerHTML={{
@@ -44,7 +44,7 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-FHH3STLSC4', {
+              gtag('config', 'G-NTNTLYGLNN', {
                 page_path: window.location.pathname,
               });
             `,
@@ -54,7 +54,7 @@ export default function RootLayout({
         {/* Ad Script */}
         <script
           type="text/javascript"
-          src="//evendisciplineseedlings.com/ca/86/51/ca86514362b783b9e9d69e455eca31f5.js"
+          src="//pl25788243.profitablecpmrate.com/2f/cb/a6/2fcba6ba994b78a08673dfe42e44d85b.js"
           async
         ></script>
       </head>
