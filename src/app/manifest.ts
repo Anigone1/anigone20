@@ -2,8 +2,8 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "AniGone",
-    short_name: "AniGone",
+    name: "Hianime",
+    short_name: "Hianime",
     description: "Watch your favorite anime shows without any interupts.",
     start_url: "/home",
     display: "standalone",
