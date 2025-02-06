@@ -103,13 +103,13 @@ export default function Marketing() {
 
           
           <div className="flex items-center gap-1">
-            <p>© 2025 AniGone . All rights reserved.</p>
+            <p>© 2025 Hiabimetv . All rights reserved.</p>
             <Link
-              href="https://anigone.com"
+              href="https://www.hianimetv.in"
               target="_blank"
               className="text-secondary underline underline-offset-2"
             >
-              anigone.com
+              hianimetv.in
             </Link>
           </div>
         </div>
