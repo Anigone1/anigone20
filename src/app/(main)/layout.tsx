@@ -4,18 +4,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AniGone | Watch your favorite shows without any interrupts.",
+  title: "Hianime | Watch your favorite shows without any interrupts.",
   description:
     "Explore the trending anime, spotlight anime, latest anime & many more.",
   keywords: [
-    "AniGone",
+    "Hianime",
     "anime streaming website",
-    "trending anime",
-    "latest anime",
+    "Hianimetv.in",
+    "Hianimetv",
     "popular anime",
   ],
   openGraph: {
-    title: "AniGone | Watch your favorite shows without any interrupts.",
+    title: "Hianime | Watch your favorite shows without any interrupts.",
     description:
       "Explore the trending anime, spotlight anime, latest anime & many more.",
     images: "",
@@ -37,13 +37,13 @@ export default function MainRootLayout({
           <p>Made with ❤️</p>
 
           <div className="flex items-center gap-1">
-            <p>© 2025 AniGone . All rights reserved.</p>
+            <p>© 2025 Hianimetv . All rights reserved.</p>
             <Link
-              href="https://anigone.com"
+              href="https://www.hianimetv.in"
               target="_blank"
               className="text-secondary underline underline-offset-2"
             >
-              anigone.com
+              hianimetv.in
             </Link>
           </div>
         </div>
