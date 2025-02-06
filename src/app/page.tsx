@@ -39,7 +39,7 @@ export default function Marketing() {
         <div className="relative mx-auto h-auto w-full max-w-[1360px] overflow-hidden bg-white/5 px-8 py-14 backdrop-blur-md md:rounded-card">
           <div className="mx-auto w-full max-w-[37.5rem] space-y-7 text-center md:mx-0 md:p-14 md:text-start xl:p-20">
             <Link href="/home" className="text-4xl font-semibold text-white">
-              AniGone
+              Hianime
             </Link>
 
             <form onSubmit={onSubmit} className="flex items-center gap-3">
